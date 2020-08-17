@@ -11,12 +11,12 @@ class GamesController < ApplicationController
   def score
     @score = 0
     @letters = ('a'..'z').to_a.sample( 10 )
-    word = params[:score]
-    url = "https://wagon-dictionary.herokuapp.com/#{word}"
+    @word = params[:score]
+    url = "https://wagon-dictionary.herokuapp.com/#{@word}"
     attempt_serialized = open(url).read
     attempt_list = JSON.parse(attempt_serialized)
-    @answers = ["Sorry but #{word} can't be built out of #{@letters}", "Sorry but #{word} does not seem to be a valid english word...", "Congratulations, #{word} seems to be a valid English word!"]
-    new_letters = word.split('')
+    @answers = ["Sorry but #{@word} can't be built out of #{@letters}", "Sorry but #{@word} does not seem to be a valid english word...", "Congratulations, #{@word} seems to be a valid English word!"]
+    new_letters = @word.split('')
     new_letters.each do |letter|
       @letters.include?(letter)
       if false
