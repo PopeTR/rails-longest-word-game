@@ -13,3 +13,53 @@
  *= require_tree .
  *= require_self
  */
+.card {
+  display: inline;
+  padding: 15px;
+  background-color: #3497dc;
+  font-size: 40px;
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.letters {
+  width: 700px;
+  padding: 0px 0px 50px 0px;
+  color: white;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  width: 400px;
+  padding: 5px;
+  margin: 20px;
+}
+
+.header {
+  align-items: center;
+  align-content: center;
+  margin: 50px auto;
+}
+
+h1 {
+  align-items: center;
+}
+
+
+.button {
+  padding: 10px;
+  width: 100px;
+  background-color: #fffbd4;
+  border: 0px;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #f1f1f1;
+  border-radius: 10px;
+  width: 200px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
+}
