@@ -5,9 +5,11 @@ class GamesController < ApplicationController
 
   def new
     @letters = ('a'..'z').to_a.sample( 10 )
+    @score = session[:score]
   end
 
   def score
+    @score = 0
     @letters = ('a'..'z').to_a.sample( 10 )
     word = params[:score]
     url = "https://wagon-dictionary.herokuapp.com/#{word}"
@@ -21,9 +23,11 @@ class GamesController < ApplicationController
         @answer = @answers[0]
       elsif attempt_list["found"]
         @answer = @answers[2]
+        @score += 1
       else
         @answer = @answers[1]
       end
     end
+    session[:score] = @score
   end
 end

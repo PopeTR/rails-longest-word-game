@@ -1,4 +1,4 @@
-<div class="header"><h1>New Game</h1>
+<div class="header"><h1>Longest Word Game</h1>
 </div>
 
 <div class="letters">
@@ -13,4 +13,8 @@
   <input class="button" type="submit" value="PLAY">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 </form>
+</div>
+
+<div class="score">
+  <h2>Your total score is... <%= @score %></h2>
 </div>
